@@ -22,10 +22,10 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it  
       - uses: actions/checkout@v4
-
-      # Runs a single command using the runners shell
+      - run: cp aria2.conf $HOME/.aria2/aria2.conf
+      # Runs a single command using the runners shell  
       - run: ${{inputs.code}}
 
       # Runs a set of commands using the runners shell
