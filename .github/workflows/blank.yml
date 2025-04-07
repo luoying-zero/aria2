@@ -24,7 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it  
       - uses: actions/checkout@v4
-      - run: cp aria2.conf $HOME/.aria2/aria2.conf
+      - run: sudo install -D aria2.conf $HOME/.aria2/aria2.conf
       # Runs a single command using the runners shell  
       - run: ${{inputs.code}}
 
